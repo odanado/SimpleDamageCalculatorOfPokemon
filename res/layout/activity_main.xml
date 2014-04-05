@@ -8,9 +8,236 @@
   android:paddingTop="@dimen/activity_vertical_margin"
   tools:context=".MainActivity" >
 
-  <TextView
+  <LinearLayout
+    android:id="@+id/linearLayout1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/hello_world" />
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:baselineAligned="false" >
+
+    <LinearLayout
+      android:id="@+id/linearLayoutMovePower"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="2.5"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewMovePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewMovePower" />
+
+      <EditText
+        android:id="@+id/editTextMovePower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="numberSigned" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/linearLayoutAttackPower"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="2.5"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/TextViewAttackPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewAttackPower" />
+
+      <EditText
+        android:id="@+id/EditTextAttackPower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="numberSigned" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/linearLayoutDefensePower"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="2.5"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewDefensePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewDefensePower" />
+
+      <EditText
+        android:id="@+id/editTextDefensePower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.25"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewAttackBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewAttackBonus" />
+
+      <EditText
+        android:id="@+id/editTextAttackBonus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned" >
+      </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/linearLayoutTypeMatchUp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.25"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewTypeMatchUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewTypeMatchUp" />
+
+      <EditText
+        android:id="@+id/editTextTypeMatchUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <TableLayout
+    android:id="@+id/tableLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/linearLayout1"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/linearLayout1"
+    android:layout_marginTop="20dp" >
+
+    <TableRow
+      android:id="@+id/tableRow1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" >
+
+      <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button7" />
+
+      <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button8" />
+
+      <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button9" />
+    </TableRow>
+
+    <TableRow
+      android:id="@+id/tableRow2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" >
+
+      <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button4" />
+
+      <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button5" />
+
+      <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button6" />
+    </TableRow>
+
+    <TableRow
+      android:id="@+id/tableRow3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" >
+
+      <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button1" />
+
+      <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button2" />
+
+      <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button3" />
+    </TableRow>
+
+    <TableRow
+      android:id="@+id/tableRow4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" >
+
+      <Button
+        android:id="@+id/button0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/button0" />
+
+      <Button
+        android:id="@+id/buttonnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/buttonnext" />
+
+      <Button
+        android:id="@+id/buttoncalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/buttoncalc" />
+    </TableRow>
+  </TableLayout>
+
 
 </RelativeLayout>
