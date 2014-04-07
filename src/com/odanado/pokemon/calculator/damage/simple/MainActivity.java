@@ -9,7 +9,6 @@ import android.widget.EditText;
 /*
  * TODO 
  * カーソルを移動させて、現在フォーカスなビューを表す
- * テンキー入力の際、カーソルの位置を一番後ろに
  */
 
 public class MainActivity extends Activity {
@@ -92,6 +91,7 @@ public class MainActivity extends Activity {
         default:
             break;
         }
+        currentEditText.setSelection(currentEditText.getText().length());
     }
     
     private void nextEditText() {
@@ -119,7 +119,8 @@ public class MainActivity extends Activity {
         currentEditText.setCursorVisible(true);
         
     }
-
+    
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
