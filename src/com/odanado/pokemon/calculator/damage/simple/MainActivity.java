@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 /*
  * TODO 
- * カーソルを移動させて、現在フォーカスなビューを表す
+ * 
  */
 
 public class MainActivity extends Activity {
@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
         }
         else {
             currentEditText = editTextMovePower;
-            currentEditText.setFocusable(true);
         }
                 
     }
@@ -99,6 +98,7 @@ public class MainActivity extends Activity {
     }
     
     public void onClickNext(View v) {
+
         switch (currentEditText.getId()) {
         case R.id.editTextMovePower:
             currentEditText = (EditText) this.findViewById(R.id.editTextAttackPower);
@@ -119,8 +119,7 @@ public class MainActivity extends Activity {
         default:
             break;
         }
-        currentEditText.setFocusable(true);
-        currentEditText.setCursorVisible(true);
+        currentEditText.requestFocus();
         
     }
     
