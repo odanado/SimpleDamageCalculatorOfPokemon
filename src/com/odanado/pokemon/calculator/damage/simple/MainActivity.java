@@ -1,10 +1,13 @@
 package com.odanado.pokemon.calculator.damage.simple;
 
+import com.odanado.pokemon.lib.DamageCalculator;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /*
  * TODO 
@@ -114,15 +117,37 @@ public class MainActivity extends Activity {
             break;
         case R.id.editTextTypeMatchUp:
             currentEditText = (EditText) this.findViewById(R.id.editTextMovePower);
+            calcDamage();
             break;
 
         default:
             break;
         }
         currentEditText.requestFocus();
-        
     }
     
+    private void calcDamage() {
+        int[] damageList;
+        int movePower;
+        int attackPower;
+        int defensePower;
+        double attackBonus;
+        double typeMatchUp;
+        int attackLevel;
+
+        movePower    = Integer.parseInt(editTextMovePower.getText().toString());
+        attackPower  = Integer.parseInt(editTextAttackPower.getText().toString());
+        defensePower = Integer.parseInt(editTextDefensePower.getText().toString());
+        attackBonus  = Double.parseDouble(editTextAttackBonus.getText().toString());
+        typeMatchUp  = Double.parseDouble(editTextTypeMatchUp.getText().toString());
+        attackLevel  = 50;
+        
+        DamageCalculator calculator = new DamageCalculator(movePower, attackPower, defensePower, attackBonus, typeMatchUp, attackLevel);
+        
+        damageList = calculator.getDamageList();
+        
+        Toast.makeText(this, String.format("%d", damageList[15]), 0).show();
+    }
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
