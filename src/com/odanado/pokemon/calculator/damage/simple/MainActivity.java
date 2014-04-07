@@ -51,38 +51,35 @@ public class MainActivity extends Activity {
         
         switch (view.getId()) {
         case R.id.button0:
-            currentEditText.setText(currentStirng + "0");
+            currentStirng += "0";
             break;
         case R.id.button1:
-            currentEditText.setText(currentStirng + "1");
+            currentStirng += "1";
             break;
         case R.id.button2:
-            currentEditText.setText(currentStirng + "2");
+            currentStirng += "2";
             break;
         case R.id.button3:
-            currentEditText.setText(currentStirng + "3");
+            currentStirng += "3";
             break;
         case R.id.button4:
-            currentEditText.setText(currentStirng + "4");
+            currentStirng += "4";
             break;
         case R.id.button5:
-            currentEditText.setText(currentStirng + "5");
+            currentStirng += "5";
             break;
         case R.id.button6:
-            currentEditText.setText(currentStirng + "6");
+            currentStirng += "6";
             break;
         case R.id.button7:
-            currentEditText.setText(currentStirng + "7");
+            currentStirng += "7";
             break;
         case R.id.button8:
-            currentEditText.setText(currentStirng + "8");
+            currentStirng += "8";
             break;
         case R.id.button9:
-            currentEditText.setText(currentStirng + "9");
+            currentStirng += "9";
             
-            break;
-        case R.id.buttonNext:
-            nextEditText();
             break;
         case R.id.buttonPeriod:
             
@@ -91,10 +88,17 @@ public class MainActivity extends Activity {
         default:
             break;
         }
+        
+        /* 3桁より大きのは制限する */
+        if(3 < currentStirng.length()) {
+            currentStirng = currentStirng.substring(0, 3);
+        }
+        
+        currentEditText.setText(currentStirng);
         currentEditText.setSelection(currentEditText.getText().length());
     }
     
-    private void nextEditText() {
+    public void onClickNext(View v) {
         switch (currentEditText.getId()) {
         case R.id.editTextMovePower:
             currentEditText = (EditText) this.findViewById(R.id.editTextAttackPower);
