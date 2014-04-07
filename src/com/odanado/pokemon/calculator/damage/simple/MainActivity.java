@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
         case R.id.buttonNext:
             nextEditText();
             break;
-        case R.id.buttonCalc:
+        case R.id.buttonPeriod:
             
             break;
 

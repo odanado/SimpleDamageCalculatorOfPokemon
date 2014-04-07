@@ -14,8 +14,9 @@
   <string name="button7">7</string>
   <string name="button8">8</string>
   <string name="button9">9</string>
-  <string name="buttonnext">次</string>
-  <string name="buttoncalc">計算</string>
+  <string name="buttonNext">次</string>
+  <string name="buttonCalc">計算</string>
+  <string name="buttonPeriod">.</string>
   
   <string name="textViewMovePower">威力</string>
   <string name="textViewAttackPower">攻撃</string>

@@ -234,19 +234,19 @@
         android:onClick="onClick" />
 
       <Button
+        android:id="@+id/buttonPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/buttonPeriod"
+        android:onClick="onClick" />
+
+      <Button
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/buttonnext"
-        android:onClick="onClick" />
-
-      <Button
-        android:id="@+id/buttonCalc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/buttoncalc"
+        android:text="@string/buttonNext"
         android:onClick="onClick" />
     </TableRow>
   </TableLayout>
