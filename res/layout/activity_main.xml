@@ -96,7 +96,7 @@
         android:id="@+id/editTextAttackBonus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned" >
+        android:inputType="number" >
       </EditText>
     </LinearLayout>
 
@@ -117,7 +117,7 @@
         android:id="@+id/editTextTypeMatchUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned" />
+        android:inputType="number" />
     </LinearLayout>
   </LinearLayout>
 

@@ -51,6 +51,8 @@ public class MainActivity extends Activity {
         
         String currentStirng = currentEditText.getText().toString();
         
+        int maxi = 999;
+        
         switch (view.getId()) {
         case R.id.button0:
             currentStirng += "0";
@@ -84,20 +86,28 @@ public class MainActivity extends Activity {
             
             break;
         case R.id.buttonPeriod:
-            
+            currentStirng += ".";
             break;
 
         default:
             break;
         }
-        
-        /* 3桁より大きのは制限する */
-        if(3 < currentStirng.length()) {
-            currentStirng = currentStirng.substring(0, 3);
+                
+        if(isDouble(currentStirng) && maxi < Double.parseDouble(currentStirng)) {
+            currentStirng = "999";
         }
         
         currentEditText.setText(currentStirng);
         currentEditText.setSelection(currentEditText.getText().length());
+    }
+    
+    private boolean isDouble(String val) {
+        try {
+            Double.parseDouble(val);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
     
     public void onClickNext(View v) {
