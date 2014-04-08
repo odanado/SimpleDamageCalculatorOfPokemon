@@ -24,10 +24,10 @@ public enum Items {
     JEWELS(0x14CD),
     
     /** こだわりハチマキ <br> 攻撃に1.5倍 (0x1800) */
-    ADHERENCE_HEADBAND(0x1800),
+    CHOICE_BAND(0x1800),
     
     /** こだわりメガネ <br> 攻撃に1.5倍 (0x1800) */
-    ADHERENCE_GLASSES(0x1800),
+    CHOICE_SPECS(0x1800),
     
     /** ふといホネ <br> 攻撃に2.0倍 (0x2000)  */
     THICK_BONE(0x2000),

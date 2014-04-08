@@ -14,10 +14,10 @@ public enum Abilities {
     IRON_FIST(0x1333),
     
     /** すてみ <br> 威力に1.2倍(0x1333) */
-    Reckless(0x1333),
+    RECKLESS(0x1333),
     
     /** アナライズ <br> 威力に1.3倍(0x14CD) */
-    Analytic(0x14CD),
+    ANALYTIC(0x14CD),
     
     /** すなのちから <br> 威力に1.3倍(0x14CD) */
     SAND_FORCE(0x14CD),
