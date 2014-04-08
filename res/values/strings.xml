@@ -17,11 +17,44 @@
   <string name="buttonNext">次</string>
   <string name="buttonCalc">計算</string>
   <string name="buttonPeriod">.</string>
-  
   <string name="textViewMovePower">威力</string>
   <string name="textViewAttackPower">攻撃</string>
   <string name="textViewDefensePower">防御</string>
   <string name="textViewAttackBonus">一致</string>
   <string name="textViewTypeMatchUp">相性</string>
+
+  <string-array name="attackAbilities">
+    <item>【鉄の拳】：威力1.2倍[捨て身]</item>
+    <item>【ちからずく】：威力1.3倍[砂の力,アナライズ,硬い爪,オーラ,スキン]</item>
+    <item>【テクニシャン】：威力1.5倍[熱暴走,毒暴走,頑丈顎,メガランチャー]</item>
+    <item>【根性】：攻撃1.5倍[はりきり,もらい火,サンパワー,フラワーギフト,プラス,マイナス]</item>
+    <item>【猛火】：威力1.5倍[新緑,激流,虫の知らせ]</item>
+    <item>【ヨガパワー】：威力2倍[力持ち]</item>
+    <item>【スナイパー】：急所ダメージ1.5倍</item>
+    <item>【色眼鏡】：悪相性ダメージ2倍</item>
+    <item></item>
+  </string-array>
+  <string-array name="defenseAbilities">
+    <item>【耐熱】：ダメージ0.5倍</item>
+    <item>【乾燥肌】：威力1.25倍</item>
+    <item>【厚い脂肪】：攻撃0.5倍[よわき,スロースタート]</item>
+    <item>【ふしぎな鱗】：防御1.5倍</item>
+    <item>【マルチスケイル】：HPMAX時にダメージ0.5倍</item>
+    <item>【ハードロック】：抜群ダメージ0.75倍[フィルター]</item>
+  </string-array>
+  <string-array name="attackItems">
+    <item>【力の鉢巻】：威力1.1倍[ものしり眼鏡]</item>
+    <item>【プレート】：威力1.2倍</item>
+    <item>【ジュエル】：威力1.3倍</item>
+    <item>【鉢巻・眼鏡】：攻撃1.5倍</item>
+    <item>【太い骨】：攻撃2倍</item>
+    <item>【達人の帯】：抜群ダメージ1.2倍</item>
+    <item>【命の珠】：ダメージ1.3倍</item>
+  </string-array>
+  <string-array name="defenseItems">
+    <item>【進化の輝石】：防御1.5倍[突撃チョッキ]</item>
+    <item>【深海の鱗】：特防2倍</item>
+    <item>【半減の実】：ダメージ0.5倍</item>
+  </string-array>
 
 </resources>

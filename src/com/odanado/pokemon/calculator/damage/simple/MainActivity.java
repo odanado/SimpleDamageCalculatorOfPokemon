@@ -7,11 +7,12 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /*
  * TODO 
- * 
+ * 特性とアイテムの表
  */
 
 public class MainActivity extends Activity {
@@ -157,6 +158,8 @@ public class MainActivity extends Activity {
         damageList = calculator.getDamageList();
         
         Toast.makeText(this, String.format("%d", damageList[15]), 0).show();
+
+
     }
     
     @Override
