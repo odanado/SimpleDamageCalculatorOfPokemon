@@ -147,9 +147,11 @@ public enum Abilities {
     /** くさのけがわ <br> 防御に1.5倍?(わかんない) */
     GRASS_PELT(0x1800);
     
-
     private int modVal;
     private Abilities(int n) {
         this.modVal = n;
+    }
+    public int getModVal() {
+        return this.modVal;
     }
 }
