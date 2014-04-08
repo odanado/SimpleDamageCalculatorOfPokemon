@@ -11,8 +11,8 @@ package com.odanado.pokemon.lib;
 public class DamageCalculator {
 
     private int movePower;
-    public int[] getDamageList() {
-        return this.damageList;
+    public int[] getDamage() {
+        return this.damage;
     }
     private int attackPower;
     private int defensePower;
@@ -20,7 +20,7 @@ public class DamageCalculator {
     private double typeMatchUp;
     private int attackLevel;
     
-    private int[] damageList;
+    private int[] damage;
     
     public DamageCalculator(int movePower, int attackPower, int defensePower, double attackBonus, double typeMatchUp, int attackLevel) {
         super();
@@ -31,7 +31,7 @@ public class DamageCalculator {
         this.typeMatchUp = typeMatchUp;
         this.attackLevel = attackLevel;
         
-        this.damageList = new int[32];
+        this.damage = new int[32];
         
         calcDamage();
     }
@@ -42,26 +42,26 @@ public class DamageCalculator {
          * マルチ対象※ * 天候※ * 急所 * 乱数幅(16分率) * タイプ一致※ * タイプ相性 * 火傷 * ダメージ補正※ )
          */
         
-        int damage;
-        damage = (attackLevel * 2) / 5 + 2;
+        int baseDamage;
+        baseDamage = (attackLevel * 2) / 5 + 2;
         
-        damage *= movePower;
+        baseDamage *= movePower;
         
-        damage *= attackPower;
+        baseDamage *= attackPower;
         
-        damage /= defensePower;
+        baseDamage /= defensePower;
         
-        damage = damage / 50 + 2;
+        baseDamage = baseDamage / 50 + 2;
         
         for(int i=0; i<16; i++) {
-            damageList[i + 16] = damage * 3 / 2;
-            damageList[i + 16] = (damageList[i + 16] * (85 + i)) / 100;
-            damageList[i] = (damage * (85 + i)) / 100;        
+            damage[i + 16] = baseDamage * 3 / 2;
+            damage[i + 16] = (damage[i + 16] * (85 + i)) / 100;
+            damage[i] = (baseDamage * (85 + i)) / 100;        
         }
         
         for(int i=0; i<32; i++) {
-            damageList[i] = calcRoundHalfDown(attackBonus * damageList[i]);
-            damageList[i] *= typeMatchUp;
+            damage[i] = calcRoundHalfDown(attackBonus * damage[i]);
+            damage[i] *= typeMatchUp;
         }
         
         

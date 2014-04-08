@@ -155,11 +155,9 @@ public class MainActivity extends Activity {
         
         DamageCalculator calculator = new DamageCalculator(movePower, attackPower, defensePower, attackBonus, typeMatchUp, attackLevel);
         
-        damageList = calculator.getDamageList();
+        damageList = calculator.getDamage();
         
         Toast.makeText(this, String.format("%d", damageList[15]), 0).show();
-
-
     }
     
     @Override
