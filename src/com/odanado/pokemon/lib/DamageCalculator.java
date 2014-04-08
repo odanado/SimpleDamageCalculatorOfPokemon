@@ -29,7 +29,8 @@ public class DamageCalculator {
 
     private int[] damage = new int[32];
 
-    public DamageCalculator(int movePower, int attackPower, int defensePower, double attackBonus, double typeMatchUp, int attackLevel, Abilities attackAbility, Abilities defenseAbility, Items attackItem, Items defenseItem, Field field, int[] damage) {
+    public DamageCalculator(int movePower, int attackPower, int defensePower, double attackBonus, double typeMatchUp, int attackLevel, 
+            Abilities attackAbility, Abilities defenseAbility, Items attackItem, Items defenseItem, Field field) {
         super();
         this.movePower = movePower;
         this.attackPower = attackPower;
