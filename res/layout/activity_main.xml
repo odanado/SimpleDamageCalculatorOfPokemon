@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
+  android:layout_width="wrap_content"
   android:layout_height="match_parent"
   android:paddingBottom="@dimen/activity_vertical_margin"
   android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -140,24 +140,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button7"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button7" />
 
       <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button8"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button8" />
 
       <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button9"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button9" />
     </TableRow>
 
     <TableRow
@@ -170,24 +170,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button4"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button4" />
 
       <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button5"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button5" />
 
       <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button6"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button6" />
     </TableRow>
 
     <TableRow
@@ -200,24 +200,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button1"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button1" />
 
       <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button2"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button2" />
 
       <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button3"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button3" />
     </TableRow>
 
     <TableRow
@@ -230,25 +230,138 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button0"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/button0" />
 
       <Button
         android:id="@+id/buttonPeriod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/buttonPeriod"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/buttonPeriod" />
 
       <Button
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/buttonNext"
-        android:onClick="onClickNext" />
+        android:onClick="onClickNext"
+        android:text="@string/buttonNext" />
     </TableRow>
   </TableLayout>
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/tableLayout1"
+    android:layout_alignParentBottom="true"
+    android:layout_alignRight="@+id/tableLayout1"
+    android:layout_below="@+id/tableLayout1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:baselineAligned="false"
+      android:orientation="horizontal" >
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewAttackAbility"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewAttackAbility" />
+
+        <Button
+          android:id="@+id/buttonAttackAbility"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Button" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewDefenseAbility"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewDefenseAbility" />
+
+        <Button
+          android:id="@+id/buttonDefenseAbility"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Button" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:baselineAligned="false" >
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewAttackItem"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewAttackItem" />
+
+        <Button
+          android:id="@+id/buttonAttackItem"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Button" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewDefenseItem"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewDefenseItem" />
+
+        <Button
+          android:id="@+id/buttonDefenseItem"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Button" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewField"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewField" />
+
+    </LinearLayout>
+
+  </LinearLayout>
 
 </RelativeLayout>

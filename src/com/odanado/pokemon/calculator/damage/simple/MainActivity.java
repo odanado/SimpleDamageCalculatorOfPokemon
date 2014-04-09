@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 /*
  * TODO 
- * 特性とアイテムの表
+ * UI の完成(特性,持物,フィールド)
  */
 
 public class MainActivity extends Activity {
@@ -153,10 +153,10 @@ public class MainActivity extends Activity {
         double typeMatchUp  = Double.parseDouble(editTextTypeMatchUp.getText().toString());
         int attackLevel     = 50;
 
-        Abilities attackAbility;
-        Abilities defenseAbility;
-        Items attackItem;
-        Items defenseItem;
+        Abilities attackAbility  = Abilities.NONE;
+        Abilities defenseAbility  = Abilities.NONE;
+        Items attackItem = Items.NONE;
+        Items defenseItem = Items.NONE;
         Field field = new Field(false, false, false, false, false, false, false, false, false);
         
         DamageCalculator calculator = new DamageCalculator(movePower, attackPower, defensePower, attackBonus, typeMatchUp, attackLevel,

@@ -22,6 +22,14 @@
   <string name="textViewDefensePower">防御</string>
   <string name="textViewAttackBonus">一致</string>
   <string name="textViewTypeMatchUp">相性</string>
+  
+  <string name="textViewAttackAbility">攻撃側特性</string>
+  <string name="textViewDefenseAbility">防御側特性</string>
+  
+  <string name="textViewAttackItem">攻撃側持物</string>
+  <string name="textViewDefenseItem">防御側持物</string>
+  
+  <string name="textViewField">その他</string>
 
   <string-array name="attackAbilities">
     <item>【鉄の拳】：威力1.2倍[捨て身]</item>
@@ -55,5 +63,7 @@
     <item>【深海の鱗】：特防2倍</item>
     <item>【半減の実】：ダメージ0.5倍</item>
   </string-array>
+  
+  
 
 </resources>
