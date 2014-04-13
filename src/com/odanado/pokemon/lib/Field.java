@@ -27,7 +27,7 @@ public class Field {
     protected boolean isHelpingHand;
 
     /** シングルか */
-    protected boolean isSingle;
+    protected boolean isDouble;
 
     /** リフレクターか */
     protected boolean isReflect;
@@ -36,7 +36,7 @@ public class Field {
     protected boolean isFriendGuard;
 
     public Field(boolean isPlusWeather, boolean isMinusWeather, boolean isWaterSport, boolean isBurn, 
-            boolean isBenefitSandstorm, boolean isHelpingHand, boolean isSingle, boolean isReflect, boolean isFriendGuard) {
+            boolean isBenefitSandstorm, boolean isHelpingHand, boolean isDouble, boolean isReflect, boolean isFriendGuard) {
         super();
         this.isPlusWeather = isPlusWeather;
         this.isMinusWeather = isMinusWeather;
@@ -44,7 +44,7 @@ public class Field {
         this.isBurn = isBurn;
         this.isBenefitSandstorm = isBenefitSandstorm;
         this.isHelpingHand = isHelpingHand;
-        this.isSingle = isSingle;
+        this.isDouble = isDouble;
         this.isReflect = isReflect;
         this.isFriendGuard = isFriendGuard;
     }

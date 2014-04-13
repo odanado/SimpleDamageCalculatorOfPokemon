@@ -145,7 +145,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button7" />
 
         <Button
@@ -153,7 +153,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button8" />
 
         <Button
@@ -161,7 +161,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button9" />
       </TableRow>
 
@@ -175,7 +175,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button4" />
 
         <Button
@@ -183,7 +183,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button5" />
 
         <Button
@@ -191,7 +191,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button6" />
       </TableRow>
 
@@ -205,7 +205,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button1" />
 
         <Button
@@ -213,7 +213,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button2" />
 
         <Button
@@ -221,7 +221,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button3" />
       </TableRow>
 
@@ -235,7 +235,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/button0" />
 
         <Button
@@ -243,7 +243,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:onClick="onClick"
+          android:onClick="onClickTenKey"
           android:text="@string/buttonPeriod" />
 
         <Button
@@ -287,7 +287,9 @@
             android:id="@+id/buttonAttackAbility"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="onClickListButton"
+            android:singleLine="true"
+            android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -306,7 +308,9 @@
             android:id="@+id/buttonDefenseAbility"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="onClickListButton"
+            android:singleLine="true"
+            android:text="" />
         </LinearLayout>
       </LinearLayout>
 
@@ -331,7 +335,9 @@
             android:id="@+id/buttonAttackItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="onClickListButton"
+            android:singleLine="true"
+            android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -350,7 +356,9 @@
             android:id="@+id/buttonDefenseItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="onClickListButton"
+            android:singleLine="true"
+            android:text="" />
         </LinearLayout>
       </LinearLayout>
 
@@ -369,53 +377,53 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content" >
 
-            <CheckBox
-              android:id="@+id/checkBoxHelpingHand"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:text="@string/checkBoxHelpingHand" />
+          <CheckBox
+            android:id="@+id/checkBoxHelpingHand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxHelpingHand" />
 
-            <CheckBox
-              android:id="@+id/checkBoxBurn"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:text="@string/checkBoxBurn" />
+          <CheckBox
+            android:id="@+id/checkBoxBurn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxBurn" />
 
-            <CheckBox
-              android:id="@+id/checkBoxPlusWeather"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:text="@string/checkBoxPlusWeather" />
+          <CheckBox
+            android:id="@+id/checkBoxPlusWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxPlusWeather" />
         </LinearLayout>
+
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content" >
 
-            <CheckBox
-              android:id="@+id/checkBoxReflect"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:text="@string/checkBoxReflect" />
+          <CheckBox
+            android:id="@+id/checkBoxReflect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxReflect" />
 
-            <CheckBox
-              android:id="@+id/checkBoxDoubleDamage"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:text="@string/checkBoxDoubleDamage" />
+          <CheckBox
+            android:id="@+id/checkBoxDoubleDamage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxDoubleDamage" />
 
-            <CheckBox
-              android:id="@+id/checkBoxMinusWeather"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:text="@string/checkBoxMinusWeather" />
+          <CheckBox
+            android:id="@+id/checkBoxMinusWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxMinusWeather" />
         </LinearLayout>
-
       </LinearLayout>
     </LinearLayout>
   </RelativeLayout>

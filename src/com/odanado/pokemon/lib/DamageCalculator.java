@@ -72,13 +72,13 @@ public class DamageCalculator {
 
         baseDamage = baseDamage / 50 + 2;
         
-        if(!field.isSingle) {
+        if(field.isDouble) {
             baseDamage = calcRoundHalfDown(1.0 * baseDamage * 0xC00 / 0x1000);
         }
-        if(!field.isPlusWeather) {
+        if(field.isPlusWeather) {
             baseDamage = calcRoundHalfDown(1.0 * baseDamage * 0x1800 / 0x1000);
         }
-        if(!field.isMinusWeather) {
+        if(field.isMinusWeather) {
             baseDamage = calcRoundHalfDown(1.0 * baseDamage * 0x800 / 0x1000);
         }
         
@@ -112,7 +112,7 @@ public class DamageCalculator {
         int mod = 0x1000;
 
         if(field.isReflect) {
-            int tmp = field.isSingle ? 0x800 : 0xA8F;
+            int tmp = field.isDouble ? 0xA8F : 0x800;
             mod = calcMod(mod, tmp);
         }
         
@@ -171,7 +171,6 @@ public class DamageCalculator {
         if(field.isBenefitSandstorm) {
             defensePower = calcRoundHalfDown(defensePower * 3 / 2);
         }
-        
         
         switch (defenseAbility) {
         case MARVEL_SCALE:
