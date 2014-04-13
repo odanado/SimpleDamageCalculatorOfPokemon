@@ -30,6 +30,13 @@
   <string name="textViewDefenseItem">防御側持物</string>
   
   <string name="textViewField">その他</string>
+  
+  <string name="checkBoxHelpingHand">手助け</string>
+  <string name="checkBoxBurn">やけど</string>
+  <string name="checkBoxPlusWeather">天候+</string>
+  <string name="checkBoxReflect">壁</string>
+  <string name="checkBoxDoubleDamage">全体技</string>
+  <string name="checkBoxMinusWeather">天候-</string>
 
   <string-array name="attackAbilities">
     <item>【鉄の拳】：威力1.2倍[捨て身]</item>

@@ -364,6 +364,58 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="@string/textViewField" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" >
+
+            <CheckBox
+              android:id="@+id/checkBoxHelpingHand"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/checkBoxHelpingHand" />
+
+            <CheckBox
+              android:id="@+id/checkBoxBurn"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/checkBoxBurn" />
+
+            <CheckBox
+              android:id="@+id/checkBoxPlusWeather"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/checkBoxPlusWeather" />
+        </LinearLayout>
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" >
+
+            <CheckBox
+              android:id="@+id/checkBoxReflect"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/checkBoxReflect" />
+
+            <CheckBox
+              android:id="@+id/checkBoxDoubleDamage"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/checkBoxDoubleDamage" />
+
+            <CheckBox
+              android:id="@+id/checkBoxMinusWeather"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/checkBoxMinusWeather" />
+        </LinearLayout>
+
       </LinearLayout>
     </LinearLayout>
   </RelativeLayout>
