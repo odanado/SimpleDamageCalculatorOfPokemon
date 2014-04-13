@@ -1,367 +1,371 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="wrap_content"
-  android:layout_height="match_parent"
+  android:id="@+id/scrollView1"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
   android:paddingBottom="@dimen/activity_vertical_margin"
   android:paddingLeft="@dimen/activity_horizontal_margin"
   android:paddingRight="@dimen/activity_horizontal_margin"
   android:paddingTop="@dimen/activity_vertical_margin"
   tools:context=".MainActivity" >
 
-  <LinearLayout
-    android:id="@+id/linearLayout1"
+  <RelativeLayout
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentTop="true"
-    android:baselineAligned="false" >
+    android:layout_height="wrap_content" >
 
     <LinearLayout
-      android:id="@+id/linearLayoutMovePower"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="2.5"
-      android:orientation="vertical" >
-
-      <TextView
-        android:id="@+id/textViewMovePower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewMovePower" />
-
-      <EditText
-        android:id="@+id/editTextMovePower"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="3"
-        android:inputType="numberSigned" />
-    </LinearLayout>
-
-    <LinearLayout
-      android:id="@+id/linearLayoutAttackPower"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="2.5"
-      android:orientation="vertical" >
-
-      <TextView
-        android:id="@+id/TextViewAttackPower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewAttackPower" />
-
-      <EditText
-        android:id="@+id/editTextAttackPower"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="3"
-        android:inputType="numberSigned" />
-    </LinearLayout>
-
-    <LinearLayout
-      android:id="@+id/linearLayoutDefensePower"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="2.5"
-      android:orientation="vertical" >
-
-      <TextView
-        android:id="@+id/textViewDefensePower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewDefensePower" />
-
-      <EditText
-        android:id="@+id/editTextDefensePower"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="3"
-        android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1.25"
-      android:orientation="vertical" >
-
-      <TextView
-        android:id="@+id/textViewAttackBonus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewAttackBonus" />
-
-      <EditText
-        android:id="@+id/editTextAttackBonus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number" >
-      </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-      android:id="@+id/linearLayoutTypeMatchUp"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1.25"
-      android:orientation="vertical" >
-
-      <TextView
-        android:id="@+id/textViewTypeMatchUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewTypeMatchUp" />
-
-      <EditText
-        android:id="@+id/editTextTypeMatchUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number" />
-    </LinearLayout>
-  </LinearLayout>
-
-  <TableLayout
-    android:id="@+id/tableLayout1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignLeft="@+id/linearLayout1"
-    android:layout_alignParentRight="true"
-    android:layout_below="@+id/linearLayout1"
-    android:layout_marginTop="20dp" >
-
-    <TableRow
-      android:id="@+id/tableRow1"
+      android:id="@+id/linearLayout1"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content" >
-
-      <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button7" />
-
-      <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button8" />
-
-      <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button9" />
-    </TableRow>
-
-    <TableRow
-      android:id="@+id/tableRow2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content" >
-
-      <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button4" />
-
-      <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button5" />
-
-      <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button6" />
-    </TableRow>
-
-    <TableRow
-      android:id="@+id/tableRow3"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content" >
-
-      <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button1" />
-
-      <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button2" />
-
-      <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button3" />
-    </TableRow>
-
-    <TableRow
-      android:id="@+id/tableRow4"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content" >
-
-      <Button
-        android:id="@+id/button0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/button0" />
-
-      <Button
-        android:id="@+id/buttonPeriod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClick"
-        android:text="@string/buttonPeriod" />
-
-      <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClickNext"
-        android:text="@string/buttonNext" />
-    </TableRow>
-  </TableLayout>
-
-  <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignLeft="@+id/tableLayout1"
-    android:layout_alignParentBottom="true"
-    android:layout_alignRight="@+id/tableLayout1"
-    android:layout_below="@+id/tableLayout1"
-    android:orientation="vertical" >
-
-    <LinearLayout
-      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:baselineAligned="false"
-      android:orientation="horizontal" >
-
-      <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-
-        <TextView
-          android:id="@+id/textViewAttackAbility"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/textViewAttackAbility" />
-
-        <Button
-          android:id="@+id/buttonAttackAbility"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Button" />
-      </LinearLayout>
-
-      <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-
-        <TextView
-          android:id="@+id/textViewDefenseAbility"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/textViewDefenseAbility" />
-
-        <Button
-          android:id="@+id/buttonDefenseAbility"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Button" />
-      </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
       android:baselineAligned="false" >
 
       <LinearLayout
+        android:id="@+id/linearLayoutMovePower"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="2.5"
         android:orientation="vertical" >
 
         <TextView
-          android:id="@+id/textViewAttackItem"
+          android:id="@+id/textViewMovePower"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/textViewAttackItem" />
+          android:text="@string/textViewMovePower" />
 
-        <Button
-          android:id="@+id/buttonAttackItem"
+        <EditText
+          android:id="@+id/editTextMovePower"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Button" />
+          android:ems="3"
+          android:inputType="numberSigned" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/linearLayoutAttackPower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/TextViewAttackPower"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewAttackPower" />
+
+        <EditText
+          android:id="@+id/editTextAttackPower"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="3"
+          android:inputType="numberSigned" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/linearLayoutDefensePower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewDefensePower"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewDefensePower" />
+
+        <EditText
+          android:id="@+id/editTextDefensePower"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="3"
+          android:inputType="number" />
       </LinearLayout>
 
       <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="1.25"
         android:orientation="vertical" >
 
         <TextView
-          android:id="@+id/textViewDefenseItem"
+          android:id="@+id/textViewAttackBonus"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/textViewDefenseItem" />
+          android:text="@string/textViewAttackBonus" />
 
-        <Button
-          android:id="@+id/buttonDefenseItem"
+        <EditText
+          android:id="@+id/editTextAttackBonus"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Button" />
+          android:inputType="number" >
+        </EditText>
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/linearLayoutTypeMatchUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.25"
+        android:orientation="vertical" >
+
+        <TextView
+          android:id="@+id/textViewTypeMatchUp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/textViewTypeMatchUp" />
+
+        <EditText
+          android:id="@+id/editTextTypeMatchUp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number" />
       </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-      android:layout_width="match_parent"
+    <TableLayout
+      android:id="@+id/tableLayout1"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/linearLayout1"
+      android:layout_alignParentRight="true"
+      android:layout_below="@+id/linearLayout1"
+      android:layout_marginTop="20dp" >
+
+      <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+          android:id="@+id/button7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button7" />
+
+        <Button
+          android:id="@+id/button8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button8" />
+
+        <Button
+          android:id="@+id/button9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button9" />
+      </TableRow>
+
+      <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+          android:id="@+id/button4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button4" />
+
+        <Button
+          android:id="@+id/button5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button5" />
+
+        <Button
+          android:id="@+id/button6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button6" />
+      </TableRow>
+
+      <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+          android:id="@+id/button1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button1" />
+
+        <Button
+          android:id="@+id/button2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button2" />
+
+        <Button
+          android:id="@+id/button3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button3" />
+      </TableRow>
+
+      <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+          android:id="@+id/button0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/button0" />
+
+        <Button
+          android:id="@+id/buttonPeriod"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClick"
+          android:text="@string/buttonPeriod" />
+
+        <Button
+          android:id="@+id/buttonNext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="onClickNext"
+          android:text="@string/buttonNext" />
+      </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/tableLayout1"
+      android:layout_alignParentBottom="true"
+      android:layout_alignRight="@+id/tableLayout1"
+      android:layout_below="@+id/tableLayout1"
       android:orientation="vertical" >
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical" >
+
+          <TextView
+            android:id="@+id/textViewAttackAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewAttackAbility" />
+
+          <Button
+            android:id="@+id/buttonAttackAbility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical" >
+
+          <TextView
+            android:id="@+id/textViewDefenseAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewDefenseAbility" />
+
+          <Button
+            android:id="@+id/buttonDefenseAbility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical" >
+
+          <TextView
+            android:id="@+id/textViewAttackItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewAttackItem" />
+
+          <Button
+            android:id="@+id/buttonAttackItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical" >
+
+          <TextView
+            android:id="@+id/textViewDefenseItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewDefenseItem" />
+
+          <Button
+            android:id="@+id/buttonDefenseItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
         <TextView
           android:id="@+id/textViewField"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="@string/textViewField" />
-
+      </LinearLayout>
     </LinearLayout>
+  </RelativeLayout>
 
-  </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>
