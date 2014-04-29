@@ -70,6 +70,7 @@ public class DamageCalculator {
 
         baseDamage /= defensePower;
 
+        System.out.println(String.format("%d %d\n", baseDamage, baseDamage / 50));
         baseDamage = baseDamage / 50 + 2;
         
         if(field.isDouble) {
@@ -92,8 +93,8 @@ public class DamageCalculator {
         }
 
         for (int i = 0; i < 32; i++) {
-            damage[i] = calcRoundHalfDown(attackBonus * damage[i]);
-            damage[i] *= typeMatchUp;
+            damage[i] = (int) (damage[i] * attackBonus);
+            damage[i] = (int) Math.floor( damage[i] * typeMatchUp);
             
             if(field.isBurn) {
                 damage[i] /= 2;

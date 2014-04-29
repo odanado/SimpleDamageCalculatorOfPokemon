@@ -239,7 +239,8 @@ public class MainActivity extends Activity {
         
         damageList = calculator.getDamage();
         
-        Toast.makeText(this, String.format("%d", damageList[15]), 0).show();
+        Toast.makeText(this, String.format("%d %d %d %d %d %d"
+                , damageList[10], damageList[11], damageList[12], damageList[13], damageList[14], damageList[15]), 1).show();
     }
     
     private Items toItem(String itemName) {
