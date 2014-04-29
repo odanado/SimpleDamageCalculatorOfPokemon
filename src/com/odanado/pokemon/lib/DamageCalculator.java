@@ -70,7 +70,6 @@ public class DamageCalculator {
 
         baseDamage /= defensePower;
 
-        System.out.println(String.format("%d %d\n", baseDamage, baseDamage / 50));
         baseDamage = baseDamage / 50 + 2;
         
         if(field.isDouble) {
