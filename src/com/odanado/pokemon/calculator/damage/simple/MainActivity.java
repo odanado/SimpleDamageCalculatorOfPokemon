@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 /*
  * TODO 
- * UI の完成(特性,持物,フィールド)
+ * ダメージ計算の特性補正(特に厚い脂肪とかよわき) の条件について精査しないとダメ
  */
 
 public class MainActivity extends Activity {

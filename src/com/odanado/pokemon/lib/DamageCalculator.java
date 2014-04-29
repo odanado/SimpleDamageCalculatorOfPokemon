@@ -188,7 +188,9 @@ public class DamageCalculator {
         case ASSAULT_VEST:
             mod = calcMod(mod, 0x1800);
             break;
-
+        case EVOLUTION_STONE:
+            mod = calcMod(mod, 0x1800);
+            break;
         default:
             break;
         }
@@ -264,8 +266,8 @@ public class DamageCalculator {
         case IRON_FIST:
             mod = calcMod(mod, 0x1333);
             break;
-        case HEATPROOF:
-            mod = calcMod(mod, 0x800);
+        case SHEER_FORCE:
+            mod = calcMod(mod, 0x14CD);
             break;
         case AERILATE:
             mod = calcMod(mod, 0x14CD);
@@ -300,8 +302,11 @@ public class DamageCalculator {
         case DRY_SKIN:
             mod = calcMod(mod, 0x1400);
             break;
-        case SHEER_FORCE:
-            mod = calcMod(mod, 0x14CD);
+        case HEATPROOF:
+            mod = calcMod(mod, 0x800);
+            break;
+        case FUR_COAT:
+            mod = calcMod(mod, 0x800);
             break;
         default:
             break;
@@ -339,10 +344,6 @@ public class DamageCalculator {
     }
     
     private int calcRoundHalfDown(double a) {
-        java.math.BigDecimal value = new java.math.BigDecimal(a);
-
-        value = value.setScale(1, java.math.RoundingMode.HALF_DOWN);
-
-        return value.intValue();
+        return (int) Math.floor(a + 0.5);
     }
 }
