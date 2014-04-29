@@ -351,18 +351,21 @@ public class MainActivity extends FragmentActivity {
             abilities = Abilities.SHEER_FORCE;
             break;
         case 3:
-            abilities = Abilities.TECHNICIAN;
+            abilities = Abilities.TOUGH_CLAWS;
             break;
         case 4:
-            abilities = Abilities.BLAZE;
+            abilities = Abilities.TECHNICIAN;
             break;
         case 5:
-            abilities = Abilities.PURE_POWER;
+            abilities = Abilities.BLAZE;
             break;
         case 6:
-            abilities = Abilities.SNIPER;
+            abilities = Abilities.PURE_POWER;
             break;
         case 7:
+            abilities = Abilities.SNIPER;
+            break;
+        case 8:
             abilities = Abilities.TINTED_LENS;
             break;
 
@@ -385,6 +388,7 @@ public class MainActivity extends FragmentActivity {
             break;
         case 3:
             abilities = Abilities.THICK_FAT;
+            break;
         case 4:
             abilities = Abilities.MARVEL_SCALE;
             break;
