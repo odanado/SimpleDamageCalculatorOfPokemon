@@ -10,6 +10,18 @@ package com.odanado.pokemon.lib;
  */
 public class DamageCalculator {
 
+    public int getMovePower() {
+        return this.movePower;
+    }
+
+    public int getAttackPower() {
+        return this.attackPower;
+    }
+
+    public int getDefensePower() {
+        return this.defensePower;
+    }
+
     private int movePower;
 
     public int[] getDamage() {
