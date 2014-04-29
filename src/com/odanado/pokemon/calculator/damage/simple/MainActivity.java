@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,13 @@ public class MainActivity extends Activity {
     private Button buttonDefenseAbility;
     private Button buttonAttackItem;
     private Button buttonDefenseItem;
+
+    private CheckBox checkBoxHelpingHand;
+    private CheckBox checkBoxBurn;
+    private CheckBox checkBoxPlusWeather;
+    private CheckBox checkBoxReflect;
+    private CheckBox checkBoxDoubleDamage;
+    private CheckBox checkBoxMinusWeather;
 
     private Activity activity;
 
@@ -71,6 +79,13 @@ public class MainActivity extends Activity {
         buttonDefenseAbility = (Button) this.findViewById(R.id.buttonDefenseAbility);
         buttonAttackItem     = (Button) this.findViewById(R.id.buttonAttackItem);
         buttonDefenseItem    = (Button) this.findViewById(R.id.buttonDefenseItem);
+
+        checkBoxHelpingHand  = (CheckBox) this.findViewById(R.id.checkBoxHelpingHand);
+        checkBoxBurn         = (CheckBox) this.findViewById(R.id.checkBoxBurn);
+        checkBoxPlusWeather  = (CheckBox) this.findViewById(R.id.checkBoxPlusWeather);
+        checkBoxReflect      = (CheckBox) this.findViewById(R.id.checkBoxReflect);
+        checkBoxDoubleDamage = (CheckBox) this.findViewById(R.id.checkBoxDoubleDamage);
+        checkBoxMinusWeather = (CheckBox) this.findViewById(R.id.checkBoxMinusWeather);
     }
     
     public void onClickListButton(View view) {
@@ -131,7 +146,6 @@ public class MainActivity extends Activity {
     
     public void onClickTenKey(View view) {
         
-        
         String currentStirng = "";
         String addString;
         /* 選択されている部分を削除 */
@@ -190,8 +204,7 @@ public class MainActivity extends Activity {
         currentEditText.setSelection(currentEditText.getText().length());
         
     }
-    
-    
+       
     public void onClickNext(View v) {
 
         switch (currentEditText.getId()) {
@@ -219,6 +232,7 @@ public class MainActivity extends Activity {
         currentEditText.selectAll();
     }
     
+    
     private void calcDamage() {
         int[] damageList;
         
@@ -233,7 +247,10 @@ public class MainActivity extends Activity {
         Abilities defenseAbility  = toAbility(buttonDefenseAbility.getText().toString());
         Items attackItem = toItem(buttonAttackItem.getText().toString());
         Items defenseItem = toItem(buttonDefenseItem.getText().toString());
-        Field field = new Field(false, false, false, false, false, false, false, false, false);
+        /* 岩タイプの砂嵐補正、Dに直接1.5倍だから暗算させよう */
+        Field field = new Field(checkBoxPlusWeather.isChecked(), checkBoxMinusWeather.isChecked(), 
+                false, checkBoxBurn.isChecked(), false, checkBoxHelpingHand.isChecked(), 
+                checkBoxDoubleDamage.isChecked(), checkBoxReflect.isChecked(), false);
         
         DamageCalculator calculator = new DamageCalculator(movePower, attackPower, defensePower, attackBonus, typeMatchUp, attackLevel,
                 attackAbility, defenseAbility, attackItem, defenseItem, field);
