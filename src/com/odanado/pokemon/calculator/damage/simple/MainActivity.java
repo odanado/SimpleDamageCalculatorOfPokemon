@@ -131,8 +131,15 @@ public class MainActivity extends Activity {
     
     public void onClickTenKey(View view) {
         
-        String currentStirng = currentEditText.getText().toString();
+        
+        String currentStirng = "";
         String addString;
+        /* 選択されている部分を削除 */
+        for(int i=0;i<currentEditText.getText().length(); i++) {
+            if(!(currentEditText.getSelectionStart() <= i && i<= currentEditText.getSelectionEnd())) {
+                currentStirng += currentEditText.getText().toString().charAt(i);
+            }
+        }
         
         switch (view.getId()) {
         case R.id.button0:
@@ -209,6 +216,7 @@ public class MainActivity extends Activity {
             break;
         }
         currentEditText.requestFocus();
+        currentEditText.selectAll();
     }
     
     private void calcDamage() {
