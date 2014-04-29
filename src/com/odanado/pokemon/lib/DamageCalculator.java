@@ -344,6 +344,7 @@ public class DamageCalculator {
     }
     
     private int calcRoundHalfDown(double a) {
-        return (int) Math.floor(a + 0.5);
+        /* 五捨六入 小数点第一位だし丸め誤差はおきない、はず... */
+        return (int) Math.floor(a + 0.4);
     }
 }
