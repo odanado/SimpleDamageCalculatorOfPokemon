@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+  android:shape="rectangle" >
+
+  <solid android:color="@color/transparent" />
+
+  <!-- android 4.x ではこのpadding はチェックボックス基準で、android2.x では View の端基準？ -->
+  <!-- チェック部分とテキストをどれだけ離すか -->
+  <padding
+    android:bottom="0dp"
+    android:left="30dp"
+    android:right="0dp"
+    android:top="0dp" />
+
+</shape>
