@@ -241,12 +241,24 @@ public class MainActivity extends FragmentActivity {
     
     
     private void calcDamage() {
+
+        int movePower      = 1;
+        int attackPower    = 1;
+        int defensePower   = 1;
+        double attackBonus = 1.0;
+        double typeMatchUp = 1.0;
         
-        int movePower       = Integer.parseInt(editTextMovePower.getText().toString());
-        int attackPower     = Integer.parseInt(editTextAttackPower.getText().toString());
-        int defensePower    = Integer.parseInt(editTextDefensePower.getText().toString());
-        double attackBonus  = Double.parseDouble(editTextAttackBonus.getText().toString());
-        double typeMatchUp  = Double.parseDouble(editTextTypeMatchUp.getText().toString());
+        try{
+            movePower    = Integer.parseInt(editTextMovePower.getText().toString());
+            attackPower  = Integer.parseInt(editTextAttackPower.getText().toString());
+            defensePower = Integer.parseInt(editTextDefensePower.getText().toString());
+            attackBonus  = Double.parseDouble(editTextAttackBonus.getText().toString());
+            typeMatchUp  = Double.parseDouble(editTextTypeMatchUp.getText().toString());
+            
+        } catch (NumberFormatException e) {
+            Toast.makeText(activity, e.toString(), Toast.LENGTH_SHORT).show();
+            return;
+        }
         int attackLevel     = 50;
 
         Abilities attackAbility  = toAbility(buttonAttackAbility.getText().toString());
