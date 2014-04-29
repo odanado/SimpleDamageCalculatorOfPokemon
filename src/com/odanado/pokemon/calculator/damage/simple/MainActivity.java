@@ -132,65 +132,58 @@ public class MainActivity extends Activity {
     public void onClickTenKey(View view) {
         
         String currentStirng = currentEditText.getText().toString();
-        
-        int maxi = 999;
+        String addString;
         
         switch (view.getId()) {
         case R.id.button0:
-            currentStirng += "0";
+            addString = "0";
             break;
         case R.id.button1:
-            currentStirng += "1";
+            addString = "1";
             break;
         case R.id.button2:
-            currentStirng += "2";
+            addString = "2";
             break;
         case R.id.button3:
-            currentStirng += "3";
+            addString = "3";
             break;
         case R.id.button4:
-            currentStirng += "4";
+            addString = "4";
             break;
         case R.id.button5:
-            currentStirng += "5";
+            addString = "5";
             break;
         case R.id.button6:
-            currentStirng += "6";
+            addString = "6";
             break;
         case R.id.button7:
-            currentStirng += "7";
+            addString = "7";
             break;
         case R.id.button8:
-            currentStirng += "8";
+            addString = "8";
             break;
         case R.id.button9:
-            currentStirng += "9";
+            addString = "9";
             
             break;
         case R.id.buttonPeriod:
-            currentStirng += ".";
+            addString = ".";
             break;
 
         default:
+            addString = "";
             break;
         }
                 
-        if(isDouble(currentStirng) && maxi < Double.parseDouble(currentStirng)) {
-            currentStirng = "999";
+        if(currentStirng.length() <= 2) {
+            currentStirng += addString;
         }
         
         currentEditText.setText(currentStirng);
         currentEditText.setSelection(currentEditText.getText().length());
+        
     }
     
-    private boolean isDouble(String val) {
-        try {
-            Double.parseDouble(val);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
     
     public void onClickNext(View v) {
 
