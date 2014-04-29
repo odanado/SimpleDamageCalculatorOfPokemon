@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="yellow">#ffff00</color>
+  <color name="dimgray">#696969</color>
+  <color name="gray">#808080</color>
+  <color name="white">#ffffff</color>
+  
+  <color name="red">#ffe20000</color>
+  <color name="lime">#ff00e200</color>
+  <color name="blue">#ff0000e2</color>
+  
+  <color name="black">#000000</color>
+  
+  <color name="activity_back_color">#fafafa</color>
+  <color name="transparent">#00000000</color>
+  
+</resources>
