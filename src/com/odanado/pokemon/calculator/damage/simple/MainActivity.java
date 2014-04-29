@@ -88,6 +88,11 @@ public class MainActivity extends FragmentActivity {
         checkBoxReflect      = (CheckBox) this.findViewById(R.id.checkBoxReflect);
         checkBoxDoubleDamage = (CheckBox) this.findViewById(R.id.checkBoxDoubleDamage);
         checkBoxMinusWeather = (CheckBox) this.findViewById(R.id.checkBoxMinusWeather);
+
+        buttonAttackAbility.setText(getResources().getStringArray(R.array.attackAbilities)[0]);
+        buttonDefenseAbility.setText(getResources().getStringArray(R.array.defenseAbilities)[0]);
+        buttonAttackItem.setText(getResources().getStringArray(R.array.attackItems)[0]);
+        buttonDefenseItem.setText(getResources().getStringArray(R.array.defenseItems)[0]);
     }
     
     public void onClickListButton(View view) {
