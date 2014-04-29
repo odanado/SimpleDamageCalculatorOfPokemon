@@ -4,11 +4,18 @@
  */
 package com.odanado.pokemon.lib;
 
+import java.io.Serializable;
+
 /**
  * @author odan
  * 
  */
-public class DamageCalculator {
+public class DamageCalculator implements Serializable {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
     public int getMovePower() {
         return this.movePower;
