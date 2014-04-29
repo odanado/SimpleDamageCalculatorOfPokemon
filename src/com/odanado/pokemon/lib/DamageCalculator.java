@@ -364,7 +364,6 @@ public class DamageCalculator implements Serializable {
     }
     
     private int calcRoundHalfDown(double a) {
-        /* 五捨六入 小数点第一位だし丸め誤差はおきない、はず... */
-        return (int) Math.floor(a + 0.4);
+        return (int) Math.ceil(((a * 10 ) - 5 ) / 10);
     }
 }
