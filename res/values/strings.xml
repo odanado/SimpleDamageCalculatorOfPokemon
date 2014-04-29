@@ -40,6 +40,11 @@
   
   <string name="ability">特性</string>
   <string name="item">持物</string>
+  
+  <string name="random">乱数</string>
+  <string name="damage">ダメージ</string>
+  <string name="crit">急所</string>
+  <string name="calcResult">計算結果</string>
 
   <string-array name="attackAbilities">
     <item>なし</item>

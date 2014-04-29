@@ -12,10 +12,11 @@ import java.io.Serializable;
  */
 public class DamageCalculator implements Serializable {
 
+
     /**
      * 
      */
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -7384605279222094229L;
 
     public int getMovePower() {
         return this.movePower;

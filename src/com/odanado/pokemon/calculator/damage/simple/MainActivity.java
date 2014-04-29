@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,7 +28,7 @@ import android.widget.Toast;
  * ダメージ計算の特性補正(特に厚い脂肪とかよわき) の条件について精査しないとダメ
  */
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
     private EditText currentEditText;
     private EditText editTextMovePower;
@@ -234,7 +236,6 @@ public class MainActivity extends Activity {
     
     
     private void calcDamage() {
-        int[] damageList;
         
         int movePower       = Integer.parseInt(editTextMovePower.getText().toString());
         int attackPower     = Integer.parseInt(editTextAttackPower.getText().toString());
@@ -254,11 +255,21 @@ public class MainActivity extends Activity {
         
         DamageCalculator calculator = new DamageCalculator(movePower, attackPower, defensePower, attackBonus, typeMatchUp, attackLevel,
                 attackAbility, defenseAbility, attackItem, defenseItem, field);
+                
+        Bundle args = new Bundle();
+        args.putSerializable("DamageCalculator", calculator);
         
-        damageList = calculator.getDamage();
+        viewResultDialog(args);
+    }
+    
+    void viewResultDialog(Bundle args) {
+
+        FragmentManager manager = getSupportFragmentManager();
+        ResultDialog resultDialog = new ResultDialog();
         
-        Toast.makeText(this, String.format("%d %d %d %d %d %d"
-                , damageList[10], damageList[11], damageList[12], damageList[13], damageList[14], damageList[15]), 1).show();
+        resultDialog.setArguments(args);
+        
+        resultDialog.show(manager, "dialog");
     }
     
     private Items toItem(String itemName) {
