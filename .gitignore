@@ -2,7 +2,6 @@
 bin/
 gen/
 libs/
-.settings/
 ic_launcher-web.png
 project.properties
 key/
