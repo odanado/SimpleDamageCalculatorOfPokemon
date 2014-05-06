@@ -17,6 +17,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.View.OnFocusChangeListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -25,7 +26,7 @@ import android.widget.Toast;
 
 /*
  * TODO 
- * ダメージ計算の特性補正(特に厚い脂肪とかよわき) の条件について精査しないとダメ
+ * 
  */
 
 public class MainActivity extends FragmentActivity {
@@ -93,6 +94,15 @@ public class MainActivity extends FragmentActivity {
         buttonDefenseAbility.setText(getResources().getStringArray(R.array.defenseAbilities)[0]);
         buttonAttackItem.setText(getResources().getStringArray(R.array.attackItems)[0]);
         buttonDefenseItem.setText(getResources().getStringArray(R.array.defenseItems)[0]);
+        
+
+        editTextAttackBonus.setOnFocusChangeListener(onFocusChangeListener);        
+        editTextAttackPower.setOnFocusChangeListener(onFocusChangeListener);
+        editTextDefensePower.setOnFocusChangeListener(onFocusChangeListener);
+        editTextMovePower.setOnFocusChangeListener(onFocusChangeListener);
+        editTextTypeMatchUp.setOnFocusChangeListener(onFocusChangeListener);
+        
+        
     }
     
     public void onClickListButton(View view) {
@@ -288,6 +298,18 @@ public class MainActivity extends FragmentActivity {
         
         resultDialog.show(manager, "dialog");
     }
+    
+    private OnFocusChangeListener onFocusChangeListener = new OnFocusChangeListener() {
+        
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+            // TODO 自動生成されたメソッド・スタブ
+            /* フォーカスを手に入れた時に、 currentEditText 変更 */
+            if(hasFocus) {
+                currentEditText = (EditText) v;
+            }
+        }
+    };
     
     private Items toItem(String itemName) {
         Items item = Items.NONE;
