@@ -248,7 +248,35 @@ public class MainActivity extends FragmentActivity {
         currentEditText.requestFocus();
         currentEditText.selectAll();
     }
+  
+    public void onClickPrev(View v) {
+        switch (currentEditText.getId()) {
+        case R.id.editTextMovePower:
+            currentEditText = (EditText) this.findViewById(R.id.editTextTypeMatchUp);
+            break;
+        case R.id.editTextAttackPower:
+            currentEditText = (EditText) this.findViewById(R.id.editTextMovePower);
+            break;
+        case R.id.editTextDefensePower:
+            currentEditText = (EditText) this.findViewById(R.id.editTextAttackPower);
+            break;
+        case R.id.editTextAttackBonus:
+            currentEditText = (EditText) this.findViewById(R.id.editTextDefensePower);
+            break;
+        case R.id.editTextTypeMatchUp:
+            currentEditText = (EditText) this.findViewById(R.id.editTextAttackBonus);
+            break;
+
+        default:
+            break;
+        }
+        currentEditText.requestFocus();
+        currentEditText.selectAll();
+    }
     
+    public void onClickClear(View v) {
+        currentEditText.setText("");
+    }
     
     private void calcDamage() {
 

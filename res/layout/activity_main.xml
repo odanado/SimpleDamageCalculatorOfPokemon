@@ -3,12 +3,12 @@
   android:id="@+id/scrollView1"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
+  android:background="@color/activity_back_color"
   android:paddingBottom="@dimen/activity_vertical_margin"
   android:paddingLeft="@dimen/activity_horizontal_margin"
   android:paddingRight="@dimen/activity_horizontal_margin"
   android:paddingTop="@dimen/activity_vertical_margin"
-  tools:context=".MainActivity"
-  android:background="@color/activity_back_color" >
+  tools:context=".MainActivity" >
 
   <RelativeLayout
     android:layout_width="wrap_content"
@@ -129,10 +129,9 @@
 
     <TableLayout
       android:id="@+id/tableLayout1"
-      android:layout_width="wrap_content"
+      android:layout_width="220dp"
       android:layout_height="wrap_content"
       android:layout_alignLeft="@+id/linearLayout1"
-      android:layout_alignParentRight="true"
       android:layout_below="@+id/linearLayout1"
       android:layout_marginTop="20dp" >
 
@@ -235,7 +234,7 @@
           android:id="@+id/button0"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_weight="1"
+          android:layout_weight="3"
           android:onClick="onClickTenKey"
           android:text="@string/button0" />
 
@@ -246,14 +245,6 @@
           android:layout_weight="1"
           android:onClick="onClickTenKey"
           android:text="@string/buttonPeriod" />
-
-        <Button
-          android:id="@+id/buttonNext"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:onClick="onClickNext"
-          android:text="@string/buttonNext" />
       </TableRow>
     </TableLayout>
 
@@ -262,7 +253,7 @@
       android:layout_height="wrap_content"
       android:layout_alignLeft="@+id/tableLayout1"
       android:layout_alignParentBottom="true"
-      android:layout_alignRight="@+id/tableLayout1"
+      android:layout_alignParentRight="true"
       android:layout_below="@+id/tableLayout1"
       android:orientation="vertical" >
 
@@ -428,6 +419,39 @@
             android:text="@string/checkBoxMinusWeather" />
         </LinearLayout>
       </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_alignTop="@+id/tableLayout1"
+      android:layout_toRightOf="@+id/tableLayout1"
+      android:orientation="vertical" >
+
+      <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClickClear"
+        android:text="@string/buttonClear" />
+
+      <Button
+        android:id="@+id/buttonPrev"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClickPrev"
+        android:text="@string/buttonPrev" />
+
+      <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClickNext"
+        android:text="@string/buttonNext" />
     </LinearLayout>
   </RelativeLayout>
 
