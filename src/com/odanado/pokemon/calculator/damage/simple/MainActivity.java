@@ -15,6 +15,7 @@ import android.content.DialogInterface;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.View.OnFocusChangeListener;
@@ -479,6 +480,20 @@ public class MainActivity extends FragmentActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        boolean res = true;
+        switch (item.getItemId()) {
+        case R.id.action_stats_calculator:
+            res = true;
+            break;
+
+        default:
+            break;
+        }
+        return res;
     }
 
 }
