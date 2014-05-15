@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
-  android:background="@color/activity_back_color"
-  >
+  android:background="@color/activity_back_color" >
 
   <TextView
     android:id="@+id/textViewPokemonName"
@@ -60,6 +59,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentLeft="true"
+    android:layout_alignRight="@+id/editTextLevel"
     android:layout_below="@+id/textViewStatsValues"
     android:layout_marginTop="10dp"
     android:baselineAligned="false" >
@@ -177,107 +177,110 @@
     <RelativeLayout
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:orientation="vertical" >
+      android:layout_weight="1" >
 
       <TextView
         android:id="@+id/textViewNature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:text="@string/textViewNature" />
 
-      <TextView
-        android:id="@+id/textViewPlus"
+      <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textViewNature"
-        android:gravity="center"
-        android:paddingLeft="2dp"
-        android:text="@string/textViewPlus"
-        android:textSize="35sp" />
+        android:baselineAligned="false" >
 
-      <TextView
-        android:id="@+id/textViewMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignTop="@+id/textViewPlus"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/textViewNature"
-        android:paddingLeft="3dp"
-        android:text="@string/textViewMinus"
-        android:textSize="35sp" />
+        <LinearLayout
+          android:id="@+id/linearLayout1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center" >
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureAPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textViewPlus" />
+          <TextView
+            android:id="@+id/textViewPlus"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/textViewPlus"
+            android:textSize="35sp"
+            android:layout_marginLeft="-3dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureAMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignLeft="@+id/textViewMinus"
-        android:layout_below="@+id/textViewPlus" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureAPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureBPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkBoxNatureAPlus"
-        android:text="" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureBPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureBMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignLeft="@+id/checkBoxNatureAMinus"
-        android:layout_below="@+id/checkBoxNatureAMinus" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureCPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureCPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkBoxNatureBPlus" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureDPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureCMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignLeft="@+id/checkBoxNatureBMinus"
-        android:layout_below="@+id/checkBoxNatureBMinus" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureSPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
+        </LinearLayout>
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureDPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkBoxNatureCPlus" />
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center" >
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureDMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignLeft="@+id/checkBoxNatureCMinus"
-        android:layout_below="@+id/checkBoxNatureCMinus" />
+          <TextView
+            android:id="@+id/textViewMinus"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:text="@string/textViewMinus"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:layout_marginLeft="-2dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureSPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkBoxNatureDPlus" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureAMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
 
-      <CheckBox
-        android:id="@+id/checkBoxNatureSMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignLeft="@+id/checkBoxNatureDMinus"
-        android:layout_below="@+id/checkBoxNatureDMinus" />
+          <CheckBox
+            android:id="@+id/checkBoxNatureBMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
+
+          <CheckBox
+            android:id="@+id/checkBoxNatureCMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
+
+          <CheckBox
+            android:id="@+id/checkBoxNatureDMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
+
+          <CheckBox
+            android:id="@+id/checkBoxNatureSMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" />
+        </LinearLayout>
+      </LinearLayout>
+
     </RelativeLayout>
   </LinearLayout>
 
@@ -290,7 +293,7 @@
     android:text="@string/textViewLevel" />
 
   <EditText
-    android:id="@+id/editText1"
+    android:id="@+id/editTextLevel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignLeft="@+id/textViewLevel"
