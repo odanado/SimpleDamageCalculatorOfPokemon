@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@color/activity_back_color"
+  >
+
+  <TextView
+    android:id="@+id/textViewPokemonName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:text="@string/textViewPokemonName" />
+
+  <EditText
+    android:id="@+id/editTextPokemonName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/textViewPokemonName"
+    android:ems="10"
+    android:imeOptions="normal"
+    android:inputType="text"
+    android:selectAllOnFocus="true" />
+
+  <TextView
+    android:id="@+id/textViewBaseStats"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/editTextPokemonName"
+    android:text="@string/textViewBaseStats" />
+
+  <TextView
+    android:id="@+id/textViewBaseStatsValues"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/textViewBaseStats"
+    android:text="@string/textViewBaseStatsValues" />
+
+  <TextView
+    android:id="@+id/textViewStats"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/textViewBaseStatsValues"
+    android:text="@string/textViewStats" />
+
+  <TextView
+    android:id="@+id/textViewStatsValues"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/textViewStats"
+    android:text="@string/textViewStatsValues" />
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/textViewStatsValues"
+    android:layout_marginTop="10dp"
+    android:baselineAligned="false" >
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewIndividualValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewIndividualValue" />
+
+      <EditText
+        android:id="@+id/editTextIndividualValueH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextIndividualValueA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextIndividualValueB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextIndividualValueC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextIndividualValueD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextIndividualValueS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewEffortValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewEffortValue" />
+
+      <EditText
+        android:id="@+id/editTextEffortValueH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextEffortValueA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextEffortValueB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextEffortValueC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextEffortValueD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+
+      <EditText
+        android:id="@+id/editTextEffortValueS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number" />
+    </LinearLayout>
+
+    <RelativeLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical" >
+
+      <TextView
+        android:id="@+id/textViewNature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewNature" />
+
+      <TextView
+        android:id="@+id/textViewPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewNature"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:text="@string/textViewPlus"
+        android:textSize="35sp" />
+
+      <TextView
+        android:id="@+id/textViewMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/textViewPlus"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textViewNature"
+        android:paddingLeft="3dp"
+        android:text="@string/textViewMinus"
+        android:textSize="35sp" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureAPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewPlus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureAMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/textViewMinus"
+        android:layout_below="@+id/textViewPlus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureBPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxNatureAPlus"
+        android:text="" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureBMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/checkBoxNatureAMinus"
+        android:layout_below="@+id/checkBoxNatureAMinus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureCPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxNatureBPlus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureCMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/checkBoxNatureBMinus"
+        android:layout_below="@+id/checkBoxNatureBMinus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureDPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxNatureCPlus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureDMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/checkBoxNatureCMinus"
+        android:layout_below="@+id/checkBoxNatureCMinus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureSPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxNatureDPlus" />
+
+      <CheckBox
+        android:id="@+id/checkBoxNatureSMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/checkBoxNatureDMinus"
+        android:layout_below="@+id/checkBoxNatureDMinus" />
+    </RelativeLayout>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/textViewLevel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/editTextPokemonName"
+    android:layout_toRightOf="@+id/editTextPokemonName"
+    android:text="@string/textViewLevel" />
+
+  <EditText
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/textViewLevel"
+    android:layout_below="@+id/textViewLevel"
+    android:ems="3"
+    android:inputType="number" />
+
+</RelativeLayout>
