@@ -46,6 +46,10 @@ public class EffortValues {
 		this.Speed = Speed;
 	}
 
+  public EffortValues(int[] values) {
+      this(values[0],values[1],values[2],values[3],values[4],values[5]);
+  }
+
 	/**
 	 * コンストラクタ</br>
 	 * 引数をメンバ変数に格納します

@@ -46,6 +46,11 @@ public class BaseStats {
 		this.Speed = Speed;
 	}
 	
+
+  public BaseStats(int[] values) {
+      this(values[0],values[1],values[2],values[3],values[4],values[5]);
+  }
+	
 	/**
 	 * hPを取得します
 	 * @return hP
