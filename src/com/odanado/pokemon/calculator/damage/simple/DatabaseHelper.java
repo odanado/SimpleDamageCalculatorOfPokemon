@@ -133,6 +133,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
+    public SQLiteDatabase openDatabase() throws SQLException {  
+        return getReadableDatabase();  
+    }  
     
     @Override
     public void onCreate(SQLiteDatabase db) {

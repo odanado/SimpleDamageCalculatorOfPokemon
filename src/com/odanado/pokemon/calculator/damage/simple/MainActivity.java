@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
@@ -328,6 +329,15 @@ public class MainActivity extends FragmentActivity {
         resultDialog.show(manager, "dialog");
     }
     
+    void viewStatsCalculatorDialog(Bundle args) {
+        
+        FragmentManager manager = getSupportFragmentManager();
+        StatsCalculatorDialog statsCalculatorDialog = new StatsCalculatorDialog();
+        
+        statsCalculatorDialog.show(manager, "statsCalculatorDialog");
+        
+    }
+    
     private OnFocusChangeListener onFocusChangeListener = new OnFocusChangeListener() {
         
         @Override
@@ -487,6 +497,7 @@ public class MainActivity extends FragmentActivity {
         boolean res = true;
         switch (item.getItemId()) {
         case R.id.action_stats_calculator:
+            viewStatsCalculatorDialog(null);
             res = true;
             break;
 
