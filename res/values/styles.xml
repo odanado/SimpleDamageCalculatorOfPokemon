@@ -2,14 +2,16 @@
 
   <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.  -->
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+  -->
   <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
     <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-     -->
+            backward-compatibility can go here.
+    -->
   </style>
+  
 
   <!-- Application theme. -->
   <style name="AppTheme" parent="AppBaseTheme">
@@ -19,6 +21,16 @@
     <item name="android:buttonStyle">@style/FlatButton</item>
     <item name="android:editTextStyle">@style/FlatEditText</item>
     <item name="android:checkboxStyle">@style/FlatCheckBox</item>
+  </style>
+  
+  <style name="StatsCalculatorDialogTheme" parent="@android:style/Theme.Dialog">
+    
+    <item name="android:buttonStyle">@style/FlatButton</item>
+    <item name="android:editTextStyle">@style/FlatEditText</item>
+    <item name="android:checkboxStyle">@style/FlatCheckBox</item>
+    
+    <item name="android:textColor">@color/black</item>
+    
   </style>
 
   <style name="FlatButton" parent="@android:style/Widget.Button">
@@ -34,5 +46,6 @@
     <item name="android:button">@drawable/check_box</item>
     <item name="android:background">@drawable/check_box_bg</item>
   </style>
+
 
 </resources>

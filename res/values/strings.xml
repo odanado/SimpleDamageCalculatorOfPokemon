@@ -48,7 +48,22 @@
   <string name="damage">ダメージ</string>
   <string name="crit">急所</string>
   <string name="calcResult">計算結果</string>
-
+  
+  <string name="textViewPokemonName">ポケモン名</string>
+  <string name="textViewBaseStats">種族値</string>
+  <string name="textViewBaseStatsValues">%1$d–%2$d–%3$d–%4$d–%5$d–%6$d</string>
+  <string name="textViewStats">能力値</string>
+  <string name="textViewStatsValues">%1$d–%2$d–%3$d–%4$d–%5$d–%6$d</string>
+  <string name="textViewLevel">レベル</string>
+  <string name="textViewIndividualValue">個体値</string>
+  <string name="textViewEffortValue">努力値</string>
+  <string name="textViewNature">性格</string>
+  <string name="textViewPlus">+</string>
+  <string name="textViewMinus">–</string>
+  
+  <string name="garchomp">ガブリアス</string>
+  <string name="toString">%1$d</string>
+  
   <string-array name="attackAbilities">
     <item>なし</item>
     <item>【鉄の拳】：威力1.2倍[捨て身]</item>
