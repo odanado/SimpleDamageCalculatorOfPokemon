@@ -237,7 +237,7 @@ public class StatsCalculatorDialog extends DialogFragment {
         }
         
         editTextPokemonName.setNextFocusDownId(editTextLevel.getId());
-        editTextLevel.setNextFocusDownId(editTextIndividualValues[0].getId());
+        editTextLevel.setNextFocusDownId(editTextEffortValues[0].getId());
         editTextIndividualValues[5].setNextFocusDownId(editTextEffortValues[0].getId());
     }
 
