@@ -31,6 +31,8 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -239,6 +241,14 @@ public class StatsCalculatorDialog extends DialogFragment {
         editTextPokemonName.setNextFocusDownId(editTextLevel.getId());
         editTextLevel.setNextFocusDownId(editTextEffortValues[0].getId());
         editTextIndividualValues[5].setNextFocusDownId(editTextEffortValues[0].getId());
+        
+        
+        for(int i = 0; i < 5; i++) {
+            checkBoxNaturesPlus[i].setOnCheckedChangeListener(onCheckedChangeListener);
+            checkBoxNaturesMinus[i].setOnCheckedChangeListener(onCheckedChangeListener);
+            
+        }
+        
     }
 
     private void setDatabase() {
@@ -329,6 +339,39 @@ public class StatsCalculatorDialog extends DialogFragment {
             
             
             return true;
+        }
+    };
+    
+    private OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
+        
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            // TODO 自動生成されたメソッド・スタブ
+            
+            for(int i = 0; i < 5; i++) {
+                if(checkBoxNaturesPlus[i].equals(buttonView)) {
+                    if(isChecked) {
+                        naturesBonus[i] = 1.1;
+                    }
+                    else {
+                        naturesBonus[i] = 1.0;
+                    }
+                }
+
+                if(checkBoxNaturesMinus[i].equals(buttonView)) {
+                    if(isChecked) {
+                        naturesBonus[i] = 0.9;
+                    }
+                    else {
+                        naturesBonus[i] = 1.0;
+                    }
+                }
+            }
+            
+            calcStats();
+            updateStats();
+            
+            
         }
     };
     
