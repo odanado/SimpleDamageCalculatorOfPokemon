@@ -118,6 +118,9 @@ public class StatsCalculatorDialog extends DialogFragment {
         
         updateStats();
         
+        dialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        
     }
 
     void updateStats() {
@@ -310,6 +313,7 @@ public class StatsCalculatorDialog extends DialogFragment {
                         if((id = v.getNextFocusDownId()) != -1) {
                             EditText text = (EditText) dialog.findViewById(id);
                             text.requestFocus();
+                            text.selectAll();
                         }
                         
                     } catch (Exception e) {
