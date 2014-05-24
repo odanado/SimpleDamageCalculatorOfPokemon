@@ -331,6 +331,11 @@ public class StatsCalculatorDialog extends DialogFragment {
                     }
                 }
                 else if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    setEffortValues();
+                    setIndividualValues();
+                    calcStats();
+                    updateStats();
+                    
                     ((InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE))
                         .hideSoftInputFromWindow(v.getWindowToken(), 0);
 
