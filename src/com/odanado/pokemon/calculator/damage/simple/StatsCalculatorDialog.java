@@ -227,19 +227,15 @@ public class StatsCalculatorDialog extends DialogFragment {
             editTextIndividualValues[i].setOnEditorActionListener(onEditorActionListener);
             editTextEffortValues[i].setOnEditorActionListener(onEditorActionListener);
 
-            /*
-             * 設定してもしゃーない感
-             * android わかんねえ
             if(i != 5) {
                 editTextIndividualValues[i].setNextFocusDownId(editTextIndividualValues[i+1].getId());
                 editTextEffortValues[i].setNextFocusDownId(editTextEffortValues[i+1].getId());
             }
-            */
-            
         }
-
         
-
+        editTextPokemonName.setNextFocusDownId(editTextLevel.getId());
+        editTextLevel.setNextFocusDownId(editTextIndividualValues[0].getId());
+        editTextIndividualValues[5].setNextFocusDownId(editTextEffortValues[0].getId());
     }
 
     private void setDatabase() {
@@ -299,7 +295,7 @@ public class StatsCalculatorDialog extends DialogFragment {
         
         @Override
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-            
+
             if(event == null) {
                 if(actionId == EditorInfo.IME_ACTION_NEXT) {
                     try {
@@ -309,12 +305,26 @@ public class StatsCalculatorDialog extends DialogFragment {
                         setIndividualValues();
                         calcStats();
                         updateStats();
+                        int id;
+
+                        if((id = v.getNextFocusDownId()) != -1) {
+                            EditText text = (EditText) dialog.findViewById(id);
+                            text.requestFocus();
+                        }
+                        
                     } catch (Exception e) {
                         Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_LONG).show();
                     }
                 }
+                else if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    ((InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(v.getWindowToken(), 0);
+
+                }
             }
-            return false;
+            
+            
+            return true;
         }
     };
     
