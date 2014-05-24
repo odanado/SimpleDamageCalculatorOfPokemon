@@ -16,6 +16,7 @@ import com.odanado.pokemon.lib.IndividualValues;
 import com.odanado.pokemon.lib.StatsCalculator;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,12 +24,17 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.TextView.OnEditorActionListener;
 
 /**
  * @author odan
@@ -214,6 +220,10 @@ public class StatsCalculatorDialog extends DialogFragment {
         checkBoxNaturesMinus[3] = (CheckBox) dialog.findViewById(R.id.checkBoxNatureDMinus);
         checkBoxNaturesMinus[4] = (CheckBox) dialog.findViewById(R.id.checkBoxNatureSMinus);
 
+        editTextPokemonName.setOnEditorActionListener(onEditorActionListener);
+        editTextLevel.setOnEditorActionListener(onEditorActionListener);
+        
+
     }
 
     private void setDatabase() {
@@ -249,5 +259,49 @@ public class StatsCalculatorDialog extends DialogFragment {
         baseStats = new BaseStats(values);
         
     }
+    
+    String toEnglishName(String name) {
+        String query = "SELECT name FROM to_japanese WHERE japanese_name = '" + name +"'";
+        Cursor cursor = database.rawQuery(query, null);
+        
+        if(cursor == null) {
+            throw new NullPointerException(name + " is Not Found");
+        }
+        
+        if(cursor.getCount() == 0) {
+            throw new IndexOutOfBoundsException(name + " is Not Found");
+        }
+        
+        
+        cursor.moveToFirst();
+        
+        return cursor.getString(0);
+        
+    }
 
+    private OnEditorActionListener onEditorActionListener = new OnEditorActionListener() {
+        
+        @Override
+        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                       
+            
+            if(event == null) {
+                if(actionId == EditorInfo.IME_ACTION_NEXT) {
+                    try {
+                        String name = toEnglishName(editTextPokemonName.getText().toString());
+                        setBaseStats(name);
+                        calcStats();
+                        updateStats();
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_LONG).show();
+                    }
+                    
+                    ((InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(v.getWindowToken(), 0);
+                }
+                return true;
+            }
+            return false;
+        }
+    };
+    
 }
