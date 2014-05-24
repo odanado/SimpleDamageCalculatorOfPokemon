@@ -222,6 +222,22 @@ public class StatsCalculatorDialog extends DialogFragment {
 
         editTextPokemonName.setOnEditorActionListener(onEditorActionListener);
         editTextLevel.setOnEditorActionListener(onEditorActionListener);
+
+        for(int i=0; i<6; i++) {
+            editTextIndividualValues[i].setOnEditorActionListener(onEditorActionListener);
+            editTextEffortValues[i].setOnEditorActionListener(onEditorActionListener);
+
+            /*
+             * 設定してもしゃーない感
+             * android わかんねえ
+            if(i != 5) {
+                editTextIndividualValues[i].setNextFocusDownId(editTextIndividualValues[i+1].getId());
+                editTextEffortValues[i].setNextFocusDownId(editTextEffortValues[i+1].getId());
+            }
+            */
+            
+        }
+
         
 
     }
@@ -283,22 +299,20 @@ public class StatsCalculatorDialog extends DialogFragment {
         
         @Override
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                       
             
             if(event == null) {
                 if(actionId == EditorInfo.IME_ACTION_NEXT) {
                     try {
                         String name = toEnglishName(editTextPokemonName.getText().toString());
                         setBaseStats(name);
+                        setEffortValues();
+                        setIndividualValues();
                         calcStats();
                         updateStats();
                     } catch (Exception e) {
                         Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_LONG).show();
                     }
-                    
-                    ((InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(v.getWindowToken(), 0);
                 }
-                return true;
             }
             return false;
         }
