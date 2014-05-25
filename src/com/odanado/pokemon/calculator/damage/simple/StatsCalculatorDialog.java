@@ -24,7 +24,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.DropBoxManager;
 import android.support.v4.app.DialogFragment;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View.OnLongClickListener;
@@ -33,10 +36,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.TextView.OnEditorActionListener;
@@ -49,7 +57,7 @@ public class StatsCalculatorDialog extends DialogFragment {
 
     private Dialog dialog;
 
-    private EditText editTextPokemonName;
+    private AutoCompletePokeName editTextPokemonName;
     private EditText editTextLevel;
     private TextView textViewBaseStatsValues;
     private TextView textViewStatsValues;
@@ -199,7 +207,7 @@ public class StatsCalculatorDialog extends DialogFragment {
         textViewStatsValues = (TextView) dialog.findViewById(R.id.textViewStatsValues);
         textViewBaseStatsValues = (TextView) dialog.findViewById(R.id.textViewBaseStatsValues);
         
-        editTextPokemonName = (EditText) dialog.findViewById(R.id.editTextPokemonName);
+        editTextPokemonName = (AutoCompletePokeName) dialog.findViewById(R.id.editTextPokemonName);
         editTextLevel = (EditText) dialog.findViewById(R.id.editTextLevel);
 
         editTextIndividualValues[0] = (EditText) dialog.findViewById(R.id.editTextIndividualValueH);
@@ -254,6 +262,25 @@ public class StatsCalculatorDialog extends DialogFragment {
             checkBoxNaturesMinus[i].setOnCheckedChangeListener(onCheckedChangeListener);
         }
         
+
+       
+        String[] names = getResources().getStringArray(R.array.pokemon_names);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item, names);
+        editTextPokemonName.setAdapter(adapter);
+        editTextPokemonName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+                    long arg3) {
+                // TODO 自動生成されたメソッド・スタブ
+                ListView listView = (ListView) arg0;
+                String name = toEnglishName(listView.getItemAtPosition(arg2).toString());
+                setBaseStats(name);
+                calcStats();
+                updateStats();
+            }
+            
+        });
     }
 
     private void setDatabase() {
