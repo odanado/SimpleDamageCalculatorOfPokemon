@@ -408,6 +408,8 @@ public class StatsCalculatorDialog extends DialogFragment {
                 }
             }
             
+            setEffortValues();
+            setIndividualValues();
             calcStats();
             updateStats();
             
