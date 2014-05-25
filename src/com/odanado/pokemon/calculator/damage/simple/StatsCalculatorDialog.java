@@ -134,6 +134,8 @@ public class StatsCalculatorDialog extends DialogFragment {
         dialog.getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         
+        Toast.makeText(getActivity(), getString(R.string.statsCalculatorToastMessage), Toast.LENGTH_LONG).show();
+        
     }
 
     void updateStats() {
@@ -246,11 +248,13 @@ public class StatsCalculatorDialog extends DialogFragment {
             if(i != 5) {
                 editTextIndividualValues[i].setNextFocusDownId(editTextIndividualValues[i+1].getId());
                 editTextEffortValues[i].setNextFocusDownId(editTextEffortValues[i+1].getId());
-                
-                editTextEffortValues[i].setOnLongClickListener(onLongClickListener);
-                
             }
         }
+        
+        editTextEffortValues[1].setOnLongClickListener(onLongClickListener);
+        editTextEffortValues[2].setOnLongClickListener(onLongClickListener);
+        editTextEffortValues[3].setOnLongClickListener(onLongClickListener);
+        editTextEffortValues[4].setOnLongClickListener(onLongClickListener);
         
         editTextPokemonName.setNextFocusDownId(editTextEffortValues[0].getId());
         editTextLevel.setNextFocusDownId(editTextEffortValues[0].getId());

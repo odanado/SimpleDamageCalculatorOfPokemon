@@ -64,6 +64,8 @@
   <string name="garchomp">ガブリアス</string>
   <string name="toString">%1$d</string>
   
+  <string name="statsCalculatorToastMessage">努力値をロングタップで代入できます。</string>
+  
   <string-array name="attackAbilities">
     <item>なし</item>
     <item>【鉄の拳】：威力1.2倍[捨て身]</item>
