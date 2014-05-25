@@ -15,6 +15,7 @@ import com.odanado.pokemon.lib.EffortValues;
 import com.odanado.pokemon.lib.IndividualValues;
 import com.odanado.pokemon.lib.StatsCalculator;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.database.Cursor;
@@ -26,6 +27,8 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View.OnLongClickListener;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
@@ -235,6 +238,9 @@ public class StatsCalculatorDialog extends DialogFragment {
             if(i != 5) {
                 editTextIndividualValues[i].setNextFocusDownId(editTextIndividualValues[i+1].getId());
                 editTextEffortValues[i].setNextFocusDownId(editTextEffortValues[i+1].getId());
+                
+                editTextEffortValues[i].setOnLongClickListener(onLongClickListener);
+                
             }
         }
         
@@ -246,7 +252,6 @@ public class StatsCalculatorDialog extends DialogFragment {
         for(int i = 0; i < 5; i++) {
             checkBoxNaturesPlus[i].setOnCheckedChangeListener(onCheckedChangeListener);
             checkBoxNaturesMinus[i].setOnCheckedChangeListener(onCheckedChangeListener);
-            
         }
         
     }
@@ -342,7 +347,6 @@ public class StatsCalculatorDialog extends DialogFragment {
                 }
             }
             
-            
             return true;
         }
     };
@@ -379,5 +383,34 @@ public class StatsCalculatorDialog extends DialogFragment {
             
         }
     };
-    
+    /**
+     * ロングタップで代入
+     */
+    private OnLongClickListener onLongClickListener = new OnLongClickListener() {
+        
+        @Override
+        public boolean onLongClick(View v) {
+            MainActivity activity = (MainActivity) getActivity();
+            
+            switch (v.getId()) {
+            case R.id.editTextEffortValueA:
+                activity.setStats(statsCalculator.getAttack(), true);
+                break;
+            case R.id.editTextEffortValueC:
+                activity.setStats(statsCalculator.getSpAttack(), true);
+                break;
+            case R.id.editTextEffortValueB:
+                activity.setStats(statsCalculator.getDefense(), false);
+                break;
+            case R.id.editTextEffortValueD:
+                activity.setStats(statsCalculator.getSpDefense(), false);
+                break;
+
+            default:
+                break;
+            }
+            dismiss();
+            return false;
+        }
+    };
 }

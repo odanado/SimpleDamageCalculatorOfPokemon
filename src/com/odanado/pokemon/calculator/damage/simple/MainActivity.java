@@ -506,5 +506,15 @@ public class MainActivity extends FragmentActivity {
         }
         return res;
     }
+    
+    public void setStats(int value, boolean isAttack) {
+        String text = String.valueOf(value);
+        if(isAttack) {
+            editTextAttackPower.setText(text);
+        }
+        else {
+            editTextDefensePower.setText(text);
+        }
+    }
 
 }
